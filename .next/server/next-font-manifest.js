@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/harshitagarwal/Harshit Vscode/Gannu/Frontend/src/app/layout\":[\"static/media/eafabf029ad39a43-s.p.woff2\"],\"/Users/harshitagarwal/Harshit Vscode/Gannu/Frontend/src/app/(other)/layout\":[\"static/media/8888a3826f4a3af4-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
