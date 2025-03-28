@@ -48,6 +48,7 @@ export interface cartProducts {
   quantity: number;
   variant: {
     color: string;
+    stock: number;
   };
 }
 
