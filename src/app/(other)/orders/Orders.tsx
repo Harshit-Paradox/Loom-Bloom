@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { Minimize } from "lucide-react";
 import { CircleX } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 type OrderItem = {
   orderId: string;
@@ -16,6 +17,8 @@ type OrderItem = {
 
 const Orders = ({ order }: { order: Array<OrderItem> }) => {
   const [selectedOrder, setSelectedOrder] = useState<OrderItem | null>(null);
+  const navigate = useNavigate();
+
   const [currentPage, setCurrentPage] = useState(1);
   const ordersPerPage = 4;
   const totalPages = Math.ceil(order.length / ordersPerPage);
@@ -26,12 +29,7 @@ const Orders = ({ order }: { order: Array<OrderItem> }) => {
     .reverse()
     .slice(indexOfFirstOrder, indexOfLastOrder);
   const handleOrderClick = (orderDetails: OrderItem) => {
-    // Toggle selection
-    if (selectedOrder?.orderId === orderDetails.orderId) {
-      setSelectedOrder(null); // Unselect order
-    } else {
-      setSelectedOrder(orderDetails); // Select order
-    }
+    navigate(`/order/${orderDetails.orderId}`, { state: { orderDetails } });
   };
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
