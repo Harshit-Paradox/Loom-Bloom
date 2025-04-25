@@ -1,18 +1,5 @@
 {
-  "/_not-found": "app/_not-found.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/(auth)/logout/page": "app/(auth)/logout/page.js",
-  "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(auth)/register/page": "app/(auth)/register/page.js",
-  "/(other)/cart/page": "app/(other)/cart/page.js",
-  "/(other)/orders/page": "app/(other)/orders/page.js",
-  "/(other)/makeOrder/page": "app/(other)/makeOrder/page.js",
-  "/(other)/policy/Return/page": "app/(other)/policy/Return/page.js",
-  "/(other)/policy/Privacy/page": "app/(other)/policy/Privacy/page.js",
-  "/(other)/product/[productId]/page": "app/(other)/product/[productId]/page.js",
-  "/(other)/contactus/page": "app/(other)/contactus/page.js",
-  "/(other)/profile/page": "app/(other)/profile/page.js",
-  "/(other)/shop/page": "app/(other)/shop/page.js",
-  "/(other)/policy/T&c/page": "app/(other)/policy/T&c/page.js",
-  "/(other)/policy/Shipping/page": "app/(other)/policy/Shipping/page.js"
+  "/(other)/shop/page": "app/(other)/shop/page.js"
 }

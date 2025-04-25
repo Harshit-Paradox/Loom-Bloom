@@ -24,11 +24,12 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import PageLoader from "@/components/Loader/ShopLoader";
+import { Slider } from "@/components/ui/slider";
 
 const ShopPage = () => {
   const [products, setProducts] = useState<Array<ProductSchema> | null>(null);
   const [categories, setCategories] = useState<string[]>(["all"]);
-  const [sortBy, setSortBy] = useState<string>("name-asc");
+  const [sortBy, setSortBy] = useState<string>("price");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [priceRange, setPriceRange] = useState<number[]>([0, 200]);
   const [page, setPage] = useState<number>(0);
@@ -97,10 +98,10 @@ const ShopPage = () => {
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="name-asc">Name (A-Z)</SelectItem>
-              <SelectItem value="name-desc">Name (Z-A)</SelectItem>
-              <SelectItem value="price-asc">Price (Low to High)</SelectItem>
-              <SelectItem value="price-desc">Price (High to Low)</SelectItem>
+              {/* <SelectItem value="price">Name (A-Z)</SelectItem>
+              <SelectItem value="-price">Name (Z-A)</SelectItem> */}
+              <SelectItem value="price">Price (Low to High)</SelectItem>
+              <SelectItem value="-price">Price (High to Low)</SelectItem>
               <SelectItem value="sales">Best Selling</SelectItem>
             </SelectContent>
           </Select>
@@ -122,13 +123,13 @@ const ShopPage = () => {
             <p className="text-sm font-medium">
               Price Range: ${priceRange[0]} - ${priceRange[1]}
             </p>
-            {/* <Slider
+            <Slider
               defaultValue={[0, maxPrice]}
               max={maxPrice}
               step={10}
               value={priceRange}
               onValueChange={setPriceRange}
-            /> */}
+            />
           </div>
         </div>
 
@@ -249,9 +250,9 @@ function ProductCard({ product }: { product: ProductSchema }) {
         <CardContent className="p-4">
           <h3 className="font-semibold text-lg mb-2">{product.productName}</h3>
           <div className="space-y-1 text-sm text-muted-foreground">
-            <p>Category: {product.category}</p>
-            <p>Available: {product.qtyavailable}</p>
-            <p>Price: ${product.price}</p>
+            {/* <p>Category: {product.category}</p> */}
+            {/* <p>Available: {product.qtyavailable}</p> */}
+            {/* <p>Price: ${product.price}</p> */}
           </div>
         </CardContent>
         <CardFooter className="p-4 pt-0 flex justify-between items-center">

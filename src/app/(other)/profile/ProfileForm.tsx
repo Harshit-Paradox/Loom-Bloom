@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 import { useUpdateProfileMutation } from "@/redux/api/userApi";
@@ -55,7 +54,6 @@ export type PasswordInput = TypeOf<typeof passwordSchema>;
 export type AddressInput = TypeOf<typeof addressSchema>;
 
 const ProfileForm = ({ user }: { user: userSchema }) => {
-
   const [isEditing, setIsEditing] = useState(false); // New state to toggle edit mode
 
   const nameForm = useForm<z.infer<typeof nameSchema>>({
@@ -78,7 +76,6 @@ const ProfileForm = ({ user }: { user: userSchema }) => {
         country: "",
 
         pinCode: "",
-
       },
     },
   });
@@ -108,7 +105,7 @@ const ProfileForm = ({ user }: { user: userSchema }) => {
     <div className="container px-0">
       <Button
         onClick={() => setIsEditing(!isEditing)} // Toggle edit mode
-        className="mb-4"
+        className="mb-4 bg-white text-black"
       >
         {isEditing ? "Cancel Editing" : "Edit Profile"}
       </Button>
