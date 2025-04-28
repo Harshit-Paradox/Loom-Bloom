@@ -378,7 +378,7 @@ const OrderPage = () => {
           <Link
             href={""}
             onClick={handlePlaceOrder}
-            className="w-full py-3 mt-4 rounded-xl text-center bg-black text-white hover:bg-white"
+            className="w-full py-3 mt-4 rounded-xl text-center bg-black text-white"
           >
             Place Order
           </Link>
